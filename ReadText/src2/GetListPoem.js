@@ -196,9 +196,6 @@ export default class GetListPoem extends Component {
         var keySerch = this.state.isKeySeach;
         var lstPoem = this.getPoem();
         var lstPoemSeach = [{}];
-        this.setState({
-            intsearch:lstPoem[1].isTitlePoem.search("T")
-        })
         for (var index = 1; index < lstPoem.length; index++) {
             if (lstPoem[index].isTitlePoem.search(keySerch) >= 0) {
                 lstPoemSeach.push(lstPoem[index]);
@@ -212,9 +209,6 @@ export default class GetListPoem extends Component {
         else{
             myListPoem: this.state.myListPoem.cloneWithRows(this.getPoem());
         }
-        this.setState({
-            intsearch:keySerch
-        })
     }
     componentDidMount() {
          this.setState({
