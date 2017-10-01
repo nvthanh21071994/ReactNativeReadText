@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { Text, View, Button,StyleSheet,TextInput } from 'react-native';
+import { Text, View, Button, StyleSheet, TextInput} from 'react-native';
 import GetListPoem from './GetListPoem';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class GetPoem extends Component {
-    
+
     constructor() {
         super();
         this.state = {}
     }
-
     componentDidMount() {
         var { params } = this.props.navigation.state;
         this.setState({
@@ -17,7 +16,7 @@ export default class GetPoem extends Component {
             bodyPoem: params.poem.isBodyPoem
         })
     }
-    
+
     render() {
         return (
             <View >
@@ -46,18 +45,9 @@ const styles = StyleSheet.create({
         padding: 3,
         margin: 3,
     },
-
-    textTile: {
-        justifyContent: 'space-around',
-        marginLeft: 20,
-        fontSize: 15,
-        fontWeight: 'bold',
-        color: '#793209'
-    }
-    ,
     textId: {
         justifyContent: 'space-around',
-        marginLeft: 20,
+        marginLeft: 50,
         fontSize: 15,
         fontWeight: 'bold',
         color: '#793209'
@@ -79,7 +69,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 5,
         marginBottom: 10,
-        marginLeft: 20,
+        marginLeft: 100,
         color: '#000000',
 
     },
